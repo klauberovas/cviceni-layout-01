@@ -16,12 +16,15 @@ body {
 .horni {
   background-color: #f1c40f;
 }
+
 .prvni {
   background-color: #2ecc71;
 }
+
 .druhy {
   background-color: #e74c3c;
 }
+
 .treti {
   background-color: #8e44ad;
 }
@@ -34,3 +37,28 @@ body {
 	- 640px
 	- 1000px
 */
+@media (min-width: 640px) {
+  .kontejner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .horni,
+  .ctvrty {
+    flex: 100%;
+  }
+
+  .prvni,
+  .druhy {
+    flex: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .prvni,
+  .druhy,
+  .treti {
+    flex: calc(100% / 3);
+  }
+}
